@@ -1,0 +1,29 @@
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1
+
+# Test cases
+test_cases = [
+    ([1, 2, 3, 4, 5], 3),     # Middle element
+    ([1, 2, 3, 4, 5], 1),     # First element
+    ([1, 2, 3, 4, 5], 5),     # Last element
+    ([1, 2, 3, 4, 5], 6),     # Non-existent element
+    ([10, 20, 30, 40, 50], 25) # Non-existent element in larger list
+]
+
+results = [binary_search(arr, target) for arr, target in test_cases]
+
+# Print results
+for i, result in enumerate(results):
+    print(f"Test case {i+1}: Result -> {result}")

@@ -1,0 +1,49 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+
+# IDEs/editors
+.vscode/
+.idea/
+
+# OS system files
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+.stcache/
+.stcache/*
+
+# Logs
+*.log
+
+# AutoGen-related 
+autogen_logs/
+autogen_outputs/
+
+# Docker 
+*.pid
+*.sock
+*.tar
+docker-compose.override.yml
+
+# JudgeVal
+judgeval_cache/
+judgeval_trace/
+judgeval_metrics/
+
+# Secrets / credentials
+.env
+*.key
+*.pem
+
+# Jupyter Notebooks checkpoints 
+.ipynb_checkpoints/

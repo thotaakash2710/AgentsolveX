@@ -1,0 +1,27 @@
+
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+
+    return -1
+
+# Test cases
+test_cases = [
+    ([1, 2, 3, 4, 5], 3),    # target is in the middle
+    ([1, 2, 3, 4, 5], 6),    # target is not in list
+    ([10, 20, 30, 40, 50], 10) # target is the first element
+]
+
+# Testing the function and printing results
+results = [binary_search(arr, target) for arr, target in test_cases]
+for i, (arr, target) in enumerate(test_cases):
+    print(f"Test case {i+1}: array={arr}, target={target}, result index={results[i]}")

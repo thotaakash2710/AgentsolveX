@@ -1,0 +1,20 @@
+code = '''
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2  # find the middle index
+
+        if arr[mid] == x:
+            return mid  # if the element is found
+        elif arr[mid] < x:
+            low = mid + 1  # ignore the left half
+        else:
+            high = mid - 1  # ignore the right half
+
+    return -1  # if the element is not present in the list
+'''
+with open('solution.py', 'w') as f:
+    f.write(code)
+    print("Code saved successfully in solution.py")
