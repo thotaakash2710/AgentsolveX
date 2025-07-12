@@ -1,4 +1,4 @@
-
+code = '''
 def binary_search(arr, target):
     low, high = 0, len(arr) - 1
 
@@ -19,3 +19,8 @@ print(binary_search([1, 2, 3, 4, 5], 6))  # Expected: -1
 print(binary_search([], 3))               # Expected: -1
 print(binary_search([1, 2, 3, 4, 5], 1))  # Expected: 0
 print(binary_search([1, 2, 3, 4, 5], 5))  # Expected: 4
+'''
+
+with open('solution.py', 'w') as f:
+    f.write(code)
+    print("Code saved successfully in solution.py")
